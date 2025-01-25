@@ -21,10 +21,6 @@ export default function Portfolio() {
     }
   };
 
-  // Create a repeated pattern of images
-  const repeatedImages = Array.from({ length: 10 }) // Adjust the length as needed
-    .flatMap(() => images); // Repeat the images array
-
   return (
     <div className="container-fluid mt-5 pt-5 port">
       <h2 className="text-uppercase fw-bold text-center pt-5">
@@ -48,7 +44,7 @@ export default function Portfolio() {
       </div>
       <div className="container py-3">
         <div className="row g-5">
-          {repeatedImages.map((img, index) => (
+          {images.map((img, index) => (
             <div className="col-lg-4 col-md-6" key={index}>
               <div className="card">
                 <img
