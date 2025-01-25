@@ -1,10 +1,10 @@
 import React from "react";
-
+import img from "../imgs/avataaars.svg";
 export default function Home() {
   return (
     <div className="content container-fluid min-vh-100 pt-5">
       <div className="row py-5  justify-content-center align-items-center d-flex text-center">
-        <img src="../imgs/avataaars.svg" className="col-md-6 col-lg-3 col-sm-2" alt="photo" />
+        <img src={img} className="col-md-6 col-lg-3 col-sm-2" alt="photo" />
         <h1 className="text-center text-uppercase text-white pt-5 fw-bold">
           start Framework
         </h1>
