@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import NotFound from './NotFound';
 
 export default function App() {
   return (
@@ -15,8 +16,10 @@ export default function App() {
         <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} />
+          <Route path="/*" element={<NotFound />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+
         </Route>
       </Routes>
     </BrowserRouter>

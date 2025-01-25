@@ -3,13 +3,21 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const[isScroll,setIsScroll]=useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen); 
   };
+  function handleScroll(){
+    if(window.scrollY > 20){
+      setIsScroll(true);
+  }else{
+    setIsScroll(false);
+  }}
+  window.addEventListener('scroll',handleScroll)
 
   return (
-    <nav className="navbar p-lg-3 navbar-expand-lg navbar-dark position-fixed top-0 start-0 end-0">
+    <nav className={`${isScroll? 'py-1':'py-3'} navbar navbar-expand-lg navbar-dark position-fixed top-0 start-0 end-0`}>
       <div className="container-fluid mx-5">
         <NavLink className="navbar-brand fs-2 fw-bold" to="/">
           START FRAMEWORK
